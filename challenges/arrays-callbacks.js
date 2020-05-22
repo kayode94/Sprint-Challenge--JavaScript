@@ -122,19 +122,3 @@ Stretch: If you haven't already, convert your array method callbacks into arrow 
 
 */
 
-// let random = function(num){
-//   return Math.random(num)
-// }
-
-// let giveMeRandom = random
-
-// console.log(giveMeRandom());
-
-
-
-// const double = n => n * 2
-
-// let arrNums = [1, 2, 3, 4];
-
-
-// console.log(arrNums.map(double))

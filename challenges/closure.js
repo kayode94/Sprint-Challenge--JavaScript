@@ -17,7 +17,7 @@ function myFunction() {
 myFunction();
 
 // Explanation: 
-//nestedFunction can access the variable "internal" because the way scoping works, if the variable isnt inside of the scope of nestedFunction, the function will look outside of its own scope to find the variable and it's value.
+// nestedFunction can access the variable "internal" because the way scoping works, if the variable isnt inside of the scope of nestedFunction, the function will look outside of its own scope to find the variable and it's value.
 
 /* Task 2: Counter */
 
