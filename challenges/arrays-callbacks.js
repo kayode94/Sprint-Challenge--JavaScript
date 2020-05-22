@@ -20,10 +20,23 @@ const zooAnimals = [
 The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal. displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
-
-
 const displayNames = [];
-console.log(displayNames);
+
+
+// for(let i = 0; i < zooAnimals.length; i++){
+//   console.log("Name: " + zooAnimals[i].animal_name, "Scientific: " + zooAnimals[i].scientific_name);
+// }
+
+// zooAnimals.forEach(function(names){
+//   console.log(names.animal_name, names.state)
+// })
+
+
+zooAnimals.forEach(function(names){
+  return displayNames.push((`Name: ${names.animal_name}, Scientific: ${names.scientific_name}`))
+})
+
+console.log(displayNames)
 
 /* Request 2: .map()
 
@@ -39,16 +52,36 @@ console.log(lowCaseAnimalNames);
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
 
 */
-const lowPopulationAnimals = [];
-console.log(lowPopulationAnimals);
+const lowCaseAnimalNames = [];
+
+
+zooAnimals.map(function(lowerNames){
+  return lowCaseAnimalNames.push((`${lowerNames.animal_name}`).toLowerCase())
+})
+
+console.log(lowCaseAnimalNames);
 
 /* Request 4: .reduce() 
 
 The zoos need to know their total animal population across the United States. Find the total population from all the zoos using the .reduce() method. Remember the reduce method takes two arguments: a callback (which itself takes two args), and an initial value for the count.
 
 */
-const populationTotal = 0;
+
+// let popSum = 0;
+// for(let i = 0; i < zooAnimals.length; i++){
+//   popSum += zooAnimals[i].population;
+// }
+
+// console.log(popSum);
+
+
+const populationTotal = zooAnimals.reduce(function(total, pop){
+  return total + (pop.population)
+}, 0);
+
 console.log(populationTotal);
+
+
 
 
 // ==== Callbacks ====  
@@ -59,6 +92,9 @@ console.log(populationTotal);
   * The last parameter accepts a callback
   * The consume function should return the invocation of cb, passing a and b into cb as arguments
 */
+function consume(a, b, cb){
+  return cb(a, b);
+}
 
 
 /* Step 2: Create several functions to callback with consume();
@@ -66,12 +102,16 @@ console.log(populationTotal);
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
+const add = (num1, num2) => num1 + num2;
 
+const multiply = (num1, num2) => num1 * num2;
+
+const greeting = (firstname, lastname) => `Hello ${firstname} ${lastname}, nice to meet you!`
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// console.log(consume(2, 2, add)); // 4
-// console.log(consume(10, 16, multiply)); // 160
-// console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+console.log(consume(2, 2, add)); // 4
+console.log(consume(10, 16, multiply)); // 160
+console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 
 
@@ -82,3 +122,19 @@ Stretch: If you haven't already, convert your array method callbacks into arrow 
 
 */
 
+// let random = function(num){
+//   return Math.random(num)
+// }
+
+// let giveMeRandom = random
+
+// console.log(giveMeRandom());
+
+
+
+// const double = n => n * 2
+
+// let arrNums = [1, 2, 3, 4];
+
+
+// console.log(arrNums.map(double))
