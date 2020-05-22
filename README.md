@@ -25,14 +25,19 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your team lead
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
-
+.forEach runs a function once for each element in an array
+.map will create a new array when you call a given function on every element in the array
 2. Explain the difference between a callback and a higher order function.
 
 3. What is closure?
 
 4. Describe the four rules of the 'this' keyword.
-
+1 when you type "this" into the global scope when there isnt a defined object, "this will default to the window object.
+2 in strict mode, "this will return undefined
+3 "this" key word has implicit binding meaning "this" refers to the object to the left of the dot when the function is called
+4 "this" key word also has explicit binding, meaning, we can explicitly set "this" to a specific value with call()  apply() and bind().
 5. Why do we need super() in an extended class?
+We need super() in extended classes because when you call super() in the constructor method it uses the parent's contructor method and has access to the parent's properties and methods.
 
 ### Task 1 - Project Set up
 
