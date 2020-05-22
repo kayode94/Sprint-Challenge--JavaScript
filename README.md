@@ -28,8 +28,10 @@ Edit this document to include your answers after each question. Make sure to lea
 .forEach runs a function once for each element in an array
 .map will create a new array when you call a given function on every element in the array
 2. Explain the difference between a callback and a higher order function.
-
-3. What is closure?
+a higher order function takes a callback function as a parameter
+a callback function is a function that can be passed to a higher order function
+3. What is closure? 
+A closure is when the inner function has access to the outer function
 
 4. Describe the four rules of the 'this' keyword.
 1 when you type "this" into the global scope when there isnt a defined object, "this will default to the window object.
